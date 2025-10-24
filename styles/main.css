@@ -1,0 +1,93 @@
+/* ========= A07 ========= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* custom property */
+:root {
+	--accent: #f6bb73;
+}
+
+/* default styles */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid var(--accent);   /* body border */
+    background: #ffffff;
+}
+a:hover, a:focus{
+	font-style: italic;
+	color: var(--accent);
+}
+h1 {
+	font-size: 150%;
+}
+h2 {
+	font-size: 130%;
+	color: var(--accent);
+}
+h3 {
+	font-size: 105%;
+}
+/* space */
+h1, h2, h3, p, ul { padding: .5em 0; }
+ul { margin-left: 2em; }
+
+/* the styles for the header */
+header {
+    /* linear gradient + bottom border */
+    background: linear-gradient(30deg, #f6bb73 0%, #ffffff 30%, #ffffff 65%, #f6bb73 100%);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: .5em;
+	& h2 {
+		font-size: 175%;
+		text-indent: 30px;
+        padding-top: .75em;
+	}
+	& h3 {
+		font-size: 130%;
+		font-style: italic;
+		text-indent: 30px;
+        padding-bottom: 1em;
+	}
+	& img {
+		float: left;
+        height: 80px;
+        margin: .75em 1em;
+    }
+}
+/* clear the float so main content starts below header */
+header::after { content: ""; display: block; clear: both; }
+
+/* the styles for the main content */
+main {
+	clear: left;
+    padding: 0 1em 1em;
+}
+
+/* speaker images on the home page */
+main img {
+    border: 4px double var(--accent);
+    border-radius: 10px;
+    margin-bottom: .5em;
+    max-width: 100%;
+    height: auto;
+}
+
+/* quote styling */
+blockquote { font-style: italic; padding: .5em 1em; }
+
+/* the styles for the footer */
+footer {
+    background: var(--accent);
+	& p {
+		text-align: center;
+        color: #ffffff;            /* white text */
+        padding: 1em 0;
+	}
+}
+
+/* CSS class */
+.large {
+	font-size: 125%;
+}
